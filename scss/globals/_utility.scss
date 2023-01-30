@@ -1,0 +1,24 @@
+.container {
+  max-width: 70rem;
+  padding: 4.75em 2em;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 1rem 3.5rem;
+  background: var(--Bright-Blue);
+  margin-bottom: 2.2rem;
+
+  &:hover {
+    opacity: .7;
+  }
+
+}
+
+a.btn {
+  text-decoration: none;
+  color: white;
+  border-radius: .8rem;
+  box-shadow: var(--Desaturated-Blue) -4px 9px 25px -6px;
+
+}

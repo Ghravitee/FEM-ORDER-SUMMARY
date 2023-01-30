@@ -1,0 +1,207 @@
+:root {
+  --Pale-Blue: hsl(225, 100%, 94%);
+  --Bright-Blue: hsl(245, 75%, 52%);
+  --Very-pale-Blue: hsl(225, 100%, 98%);
+  --Desaturated-Blue: hsl(224, 23%, 55%);
+  --Dark-Blue: hsl(223, 47%, 23%);
+  --ff-primary: "Red Hat Display", sans-serif;
+  --spacer: 1.2rem;
+  --br: 1.2rem;
+}
+
+/* For box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removes default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* List elements */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/*  root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Default styles for elements that do not have a class*/
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Global styling for images*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+ul {
+  padding-left: 0;
+}
+
+body {
+  background-color: var(--Pale-Blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: var(--ff-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@media (min-width: 23.45em) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20.3125rem;
+  background: white;
+  border-radius: var(--br);
+}
+.card__text {
+  padding: 1.6rem;
+}
+
+.card__text--widget {
+  display: flex;
+  padding: 0.9rem;
+  background: var(--Very-pale-Blue);
+  border-radius: 0.8rem;
+  gap: 1rem;
+  align-items: center;
+}
+.card__text--widget__content--link {
+  margin-left: auto;
+}
+
+.container {
+  max-width: 70rem;
+  padding: 4.75em 2em;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 1rem 3.5rem;
+  background: var(--Bright-Blue);
+  margin-bottom: 2.2rem;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+a.btn {
+  text-decoration: none;
+  color: white;
+  border-radius: 0.8rem;
+  box-shadow: var(--Desaturated-Blue) -4px 9px 25px -6px;
+}
+
+.card .qr-code {
+  border-radius: var(--br) var(--br) 0 0;
+}
+
+.card__text--heading {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--Dark-Blue);
+  line-height: 1.2;
+  margin-bottom: var(--spacer);
+}
+.card__text--paragraph {
+  color: var(--Desaturated-Blue);
+  font-size: 0.9rem;
+  max-width: 16rem;
+  margin: 0 auto;
+  font-weight: 500;
+  margin-bottom: var(--spacer);
+}
+.card__text--cancel {
+  color: var(--Desaturated-Blue);
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.card__text--widget {
+  margin-bottom: 2.5rem;
+}
+.card__text--widget__content--subheading {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+.card__text--widget__content--pricing {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--Desaturated-Blue);
+}
+.card__text--widget__content--link {
+  font-size: 0.8rem;
+  color: var(--Bright-Blue);
+  font-weight: 900;
+}
+
+.card__text--widget__content--link:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.card__text--cancel:hover {
+  color: var(--Dark-Blue);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

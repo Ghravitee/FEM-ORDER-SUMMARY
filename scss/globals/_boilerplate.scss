@@ -1,0 +1,44 @@
+body {
+  background-color: var(--Pale-Blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: var(--ff-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  @media (min-width: 23.45em) {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+  }
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20.3125rem;
+  background: white;
+  border-radius: var(--br);
+
+  &__text {
+    padding: 1.6rem;
+  }
+}
+
+.card__text--widget {
+  display: flex;
+  padding: .9rem;
+  background: var(--Very-pale-Blue);
+  border-radius: .8rem;
+  gap: 1rem;
+  align-items: center;
+
+
+  &__content--link {
+    margin-left: auto;
+  }
+}
